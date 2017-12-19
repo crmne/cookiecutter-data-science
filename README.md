@@ -1,9 +1,9 @@
-# Cookiecutter Data Science
+# Cookiecutter Data Science on Steroids
 
 _A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
 
 
-#### [Project homepage](http://drivendata.github.io/cookiecutter-data-science/)
+Based on [Cookiecutter Datascience](http://drivendata.github.io/cookiecutter-data-science/).
 
 
 ### Requirements to use the cookiecutter template:
@@ -26,7 +26,7 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
-    cookiecutter https://github.com/drivendata/cookiecutter-data-science
+    cookiecutter https://github.com/crmne/cookiecutter-data-science
 
 
 [![asciicast](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02.png)](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02)
@@ -77,7 +77,7 @@ The directory structure of your new project looks like this:
     │   │
     │   ├── models         <- Scripts to train models and then use trained models to make
     │   │   │                 predictions
-    │   │   ├── predict_model.py
+    │   │   ├── predict.py
     │   │   ├── train_model.py
     │   │   └── test_model.py
     │   │
