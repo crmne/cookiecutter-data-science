@@ -10,8 +10,7 @@ from dotenv import find_dotenv, load_dotenv
 from data.make_dataset import make_dataset
 from data.split_dataset import split_dataset
 from features.build_features import build_features
-from models.predict import predict
-from models.test_model import test_model
+from models.predict import predict, test_model
 from models.train_model import train_model
 from visualization.visualize import visualize_data
 

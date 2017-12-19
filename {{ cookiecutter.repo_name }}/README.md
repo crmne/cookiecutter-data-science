@@ -35,7 +35,8 @@ Project Organization
     │
     ├── src                <- Source code for use in this project.
     │   ├── app.py         <- Flask API that makes predictions using the trained model.
-    │   └── cli.py         <- Entry point for all the scripts described below.
+    │   ├── cli.py         <- Entry point for all the scripts described below.
+    │   └── test_app.py    <- Flask API intergration tests.
     │   │
     │   ├── data           <- Scripts to download or generate data
     │   │   ├── make_dataset.py

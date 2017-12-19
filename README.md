@@ -66,7 +66,8 @@ The directory structure of your new project looks like this:
     │
     ├── src                <- Source code for use in this project.
     │   ├── app.py         <- Flask API that makes predictions using the trained model.
-    │   └── cli.py         <- Entry point for all the scripts described below.
+    │   ├── cli.py         <- Entry point for all the scripts described below.
+    │   └── test_app.py    <- Flask API intergration tests.
     │   │
     │   ├── data           <- Scripts to download or generate data
     │   │   ├── make_dataset.py
@@ -78,8 +79,7 @@ The directory structure of your new project looks like this:
     │   ├── models         <- Scripts to train models and then use trained models to make
     │   │   │                 predictions
     │   │   ├── predict.py
-    │   │   ├── train_model.py
-    │   │   └── test_model.py
+    │   │   └── train_model.py
     │   │
     │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
     │       └── visualize.py

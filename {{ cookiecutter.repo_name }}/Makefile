@@ -146,7 +146,7 @@ app: $(MODEL)
 
 ## Runs the tests
 test:
-	MODEL=$(MODEL) FEATURE_EXTRACTOR=$(FEATURE_EXTRACTOR) pytest --flake8 --isort --cov=src
+	MODEL=$(MODEL) FEATURE_EXTRACTOR=$(FEATURE_EXTRACTOR) pytest --flake8 --isort --cov=src --ignore=docs
 
 # SQL is used as an example
 $(DATASET): $(SQL)
