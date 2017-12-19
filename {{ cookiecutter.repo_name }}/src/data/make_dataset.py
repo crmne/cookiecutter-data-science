@@ -1,30 +1,18 @@
 # -*- coding: utf-8 -*-
-import os
-import click
 import logging
-from dotenv import find_dotenv, load_dotenv
+
+import click
 
 
-@click.command()
-@click.argument('input_filepath', type=click.Path(exists=True))
-@click.argument('output_filepath', type=click.Path())
-def main(input_filepath, output_filepath):
-    """ Runs data processing scripts to turn raw data from (../raw) into
-        cleaned data ready to be analyzed (saved in ../processed).
+@click.command(short_help='Downloads or generates raw data')
+@click.argument('input_path', type=click.Path(exists=True))
+@click.argument('dataset_path', type=click.Path())
+def make_dataset(input_path, dataset_path):
+    """Downloads or generates raw data.
+
+    Reads an input file from INPUT_PATH and saves the dataset in
+    DATASET_PATH.
     """
     logger = logging.getLogger(__name__)
-    logger.info('making final data set from raw data')
-
-
-if __name__ == '__main__':
-    log_fmt = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    logging.basicConfig(level=logging.INFO, format=log_fmt)
-
-    # not used in this stub but often useful for finding various files
-    project_dir = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir)
-
-    # find .env automagically by walking up directories until it's found, then
-    # load up the .env entries as environment variables
-    load_dotenv(find_dotenv())
-
-    main()
+    logger.info('reading inputs from {}'.format(input_path))
+    logger.info('saving dataset in {}'.format(dataset_path))
