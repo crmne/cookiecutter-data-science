@@ -42,10 +42,6 @@ endif
 requirements: test_environment
 	$(PIP) install -r requirements.txt
 
-## Make Dataset
-data: requirements
-	$(PYTHON_INTERPRETER) src/data/make_dataset.py
-
 ## Delete all compiled Python files
 clean:
 	find . -name "*.pyc" -exec rm {} \;
